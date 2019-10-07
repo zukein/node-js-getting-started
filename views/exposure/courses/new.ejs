@@ -1,0 +1,35 @@
+<%- include('../../includes/head.ejs') %>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="/javascripts/exposure.js"></script>
+<link rel="stylesheet" href="/stylesheets/exposure.css">
+</head>
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+  <main>
+      <%- include('../commonNav.ejs') %>
+    <div class="container">
+
+
+
+<div class="data-form">
+  <form class="form-signin" action="<%=`/courses/create`%>" method="POST">
+    <h2 class="form-signin-heading">追加</h2>
+    <label for="inputTitle">挑戦したいこと</label>
+    <input type="text" name="title" id="inputTitle" class="form-control" placeholder="free text" autofocus>
+    <label for="inputDescription">挑戦日時</label>
+    <input type="text" name="description" id="inputDescription" class="form-control" placeholder="m/d">
+    <label for="inputPoint">POINT</label>
+    <input type="text" name="point" id="inputPoint" pattern="\d*" class="form-control" placeholder="自動設定したい" required>
+    <label for="inputCost">SUD</label>
+    <input type="text" name="cost" id="inputCost" pattern="\d*" class="form-control" placeholder="1-100" required>
+    <br /><button class="btn btn-lg btn-primary btn-block" type="submit">保存</button>
+  </form>
+</div>
+
+
+
+</div>
+</main>
+
+<%- include('../../includes//end.ejs') %>

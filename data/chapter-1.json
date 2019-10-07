@@ -1,0 +1,68 @@
+{
+	"output": [
+		{
+			"resType": "text",
+			"delay": 0,
+			"content": "こんにちは、@user_nameさん！\nまたお会いできて、嬉しいです！"
+		},
+		{
+			"resType": "text",
+			"delay": 0,
+			"content": "今日は、@user_nameさんのゴールについて、話しましょう。",
+			"option": {
+				"type": "quickRes",
+				"select": [
+					{
+						"res": "了解!",
+						"step": 4
+					},
+					{
+						"res": "ゴールって?"
+					}
+				]
+			}
+		},
+		{
+			"resType": "text",
+			"delay": 0,
+			"content": "ゴールは、ああなればいいなという希望や、こうなりたいという目標のこと。",
+			"option": {
+				"type": "quickRes",
+				"select": [
+					{
+						"res": "なるほど"
+					},
+					{
+						"res": "へぇ"
+					}
+				]
+			}
+		},
+		{
+			"resType": "text",
+			"delay": 0,
+			"content": "アプリに取り組むことで、どうなりたいかっていう、@user_nameさんの気持ちが大事なんです。",
+			"option": {
+				"type": "quickRes",
+				"select": [
+					{
+						"res": "わかった！"
+					}
+				]
+			}
+		},
+		{
+			"resType": "text",
+			"delay": 0,
+			"content": "目標とかゴールっていうと、なんだが仰々しいですけど、こうなりたいっていう希望みたいなのはありますか？"
+		},
+		{
+			"resType": "text",
+			"delay": 0,
+			"content": "今の気分を記録してみませんか?",
+			"option": {
+				"type": "feeling"
+			}
+		}
+	]
+}

@@ -1,0 +1,31 @@
+<%- include('../includes/head.ejs') %>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="/javascripts/exposure.js"></script>
+<link rel="stylesheet" href="/stylesheets/exposure.css">
+</head>
+
+<body>
+  <%- include('../includes/navigation.ejs') %>
+  <main>
+    <%- include('../exposure/commonNav.ejs') %>
+    <div class="container">
+      <div class="menus">
+        <a href="/courses"><img src="images/exposure/menu1.jpg" alt=""></a>
+        <p>挑戦すること</p>
+      </div>
+      <div class="menus">
+        <a href="/subscribers"><img src="images/exposure/menu2.jpg" alt=""></a>
+        <p>体にいいこと</p>
+      </div>
+      <div class="menus">
+        <a href="/users"><img src="images/exposure/menu3.jpg" alt=""></a>
+        <p>好きなこと</p>
+      </div>
+      <div class="menus">
+        <a href="/courses"><img src="images/exposure/menu4.jpg" alt=""></a>
+        <p>自動操作モード</p>
+      </div>
+    </div>
+  </main>
+
+  <%- include('../includes/end.ejs') %>

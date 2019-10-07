@@ -1,0 +1,40 @@
+<h1 class="center">フォロー
+  <%= subscriber.name %>
+</h1>
+
+<table class="table">
+  <tr>
+    <th>名前</th>
+    <td>
+      <%= subscriber.name %>
+    </td>
+  </tr>
+  <tr>
+    <th>メールアドレス</th>
+    <td>
+      <%= subscriber.email%>
+    </td>
+  </tr>
+  <tr>
+    <th>認証コード</th>
+    <td>
+      <%= subscriber.zipCode%>
+    </td>
+  </tr>
+</table>
+
+<p>This subscriber has
+  <%= subscriber.courses.length %> associated course(s)
+</p>
+
+<div>
+  <a class="button" href="<%=`/subscribers/${subscriber._id}/edit`%>">
+    編集
+  </a>
+</div>
+<div>
+  <a class="button" href="<%= `/subscribers/${subscriber._id}/delete?_method=DELETE` %>" onclick="return confirm('Are you sure you want to delete this record?')" a>削除</a>
+</div>
+<div>
+  <a class="button" href="/subscribers">一覧</a>
+</div>

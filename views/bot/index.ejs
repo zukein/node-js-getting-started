@@ -1,0 +1,46 @@
+<%- include('../includes/head.ejs') %>
+<link rel='stylesheet' href='/stylesheets/botMain.css' />
+<link rel="stylesheet" href="/stylesheets/botCharactor.css">
+<script src="/javascripts/botMain.js" defer="defer"></script>
+<script src="/javascripts/botAnimation.js" defer="defer"></script>
+<script>
+  // ID値「character」に対してCSSアニメ―ション「pururun」を600ミリ秒の間隔を空けてループ再生
+  // looopAnimation("character", "purun", 600);
+</script>
+</head>
+
+<body>
+  <%- include('../includes/navigation.ejs') %>
+
+  <main>
+
+    <div id="nav">
+      <div class="col-sm nav-align">
+        <p><span>
+            <font size="6.5" ; color="black">ChatBot</font>
+          </span></p>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="monitor">
+        <!-- キャラによっては影をつける -->
+        <!-- <div class="shadow"></div> -->
+        <img id="character" class="purun" src="images/character.png" width="200" height="200">
+      </div>
+      <div class="msg-container">
+        <% if (!isAuthenticated) { %>
+        <div class="logout-msg">
+          <p>ログインしましょう</p>
+        </div>
+        <% }%>
+      </div>
+      <!-- デバッグボタン -->
+      <!-- <div class="controller">
+        <button id="btn_start">開始</button>
+        <button id="btn_next">次へ</button>
+      </div> -->
+    </div>
+  </main>
+
+  <%- include('../includes/end.ejs') %>

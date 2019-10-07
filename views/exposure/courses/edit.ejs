@@ -1,0 +1,33 @@
+<%- include('../../includes/head.ejs') %>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="/javascripts/exposure.js"></script>
+<link rel="stylesheet" href="/stylesheets/exposure.css">
+</head>
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+  <main>
+      <%- include('../commonNav.ejs') %>
+    <div class="container">
+
+      
+<div class="data-form">
+  <form class="form-signin" action="<%=`/courses/${course._id}/update?_method=PUT`%>" method="POST">
+    <h2 class="form-signin-heading">編集</h2>
+    <label for="inputTitle">挑戦すること</label>
+    <input type="text" name="title" id="inputTitle" class="form-control" value="<%= course.title %>" placeholder="free text" autofocus>
+    <label for="inputDescription">挑戦日</label>
+    <input type="text" name="description" id="inputDescription" class="form-control" value="<%= course.description %>" placeholder="m/d">
+    <label for="inputPoint">POINT</label>
+    <input type="text" name="point" id="inputPoint" pattern="\d*" class="form-control" value="<%= course.point %>" placeholder="自動設定したい" required>
+    <label for="inputCost">SUD</label>
+    <input type="text" name="cost" id="inputCost" pattern="\d*" class="form-control" value="<%= course.cost %>" placeholder="1-100" required>
+    <br /><button class="btn btn-lg btn-primary btn-block" type="submit">保存</button>
+  </form>
+</div>
+
+
+</div>
+</main>
+
+<%- include('../../includes//end.ejs') %>

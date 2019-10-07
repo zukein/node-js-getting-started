@@ -1,0 +1,24 @@
+<header class="navbar">
+  <ul class="nav">
+    <a class="<%= path === '/bot' ? 'nav-link active' : 'nav-link' %>" href="/bot">Bot</a>
+    <% if (isAuthenticated) { %>
+    <a class="<%= path === '/exposure' ? 'nav-link active' : 'nav-link' %>" href="/exposure">Exposure</a>
+    <% } %>
+  </ul>
+  <% if (!isAuthenticated) { %>
+  <div class="btn-group btn-group-toggle">
+    <label class="btn btn-outline-primary">
+      <a class="<%= path === '/auth/login' ? 'active' : '' %>" href="/auth/login">Login</a>
+    </label>
+    <label class="btn btn-outline-primary">
+      <a class="<%= path === '/auth/signup' ? 'active' : '' %>" href="/auth/signup">Signup</a>
+    </label>
+  </div>
+  <% } else { %>
+  <div class="btn-group btn-group-toggle">
+    <form action="/auth/logout" method="post">
+      <button class="btn btn-outline-primary" type="submit">Logout</button>
+    </form>
+  </div>
+  <% } %>
+</header>

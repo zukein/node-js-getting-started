@@ -1,0 +1,12 @@
+<div class="data-form">
+  <form class="form-signin" action="<%=`/subscribers/${subscriber._id}/update?_method=PUT`%>" method="POST">
+    <h2 class="form-signin-heading">編集画面</h2>
+    <label for="inputName">フォローしたい人の名前</label>
+    <input type="text" name="name" id="inputName" class="form-control" value="<%= subscriber.name %>" placeholder="名前" autofocus>
+    <label for="inputEmail">メールアドレス</label>
+    <input type="email" name="email" id="inputEmail" class="form-control" value="<%= subscriber.email %>" placeholder="Email" required>
+    <label for="inputZipCode">認証Code</label>
+    <input type="text" name="zipCode" id="inputZipCode" pattern="[0-9]{5}" class="form-control" value="<%= subscriber.zipCode %>" placeholder="Code(8桁)" required>
+    <br /><button class="btn btn-lg btn-primary btn-block" type="submit">保存</button>
+  </form>
+</div>

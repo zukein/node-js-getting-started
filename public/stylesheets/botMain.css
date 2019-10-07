@@ -1,0 +1,123 @@
+/* a {
+  color: #00B7FF;
+} */
+
+.main {
+  text-align: center;
+}
+
+.monitor{
+  background-color: lightblue;
+  width:100%;
+  height: 400px;
+  margin: auto;
+}
+
+.msg-container{
+  height: 200px;
+  margin: 2em auto;
+  padding: 1em;
+  width: 90%;
+  border: 5px double #8491c3; /*太さ・線種・色*/
+  color: #333; /* 文字色 */
+  background-color: #fff; /* 背景色 */
+  border-radius: 1px; /*角の丸み*/
+}
+
+.controller{
+  margin: 20px;
+}
+
+.msg{
+  max-width: 100%;
+  height: 100%;
+}
+
+#txt{
+  margin-top: 0px;
+  padding-top: 14px;
+}
+
+.msg__imgbox,
+.msg__movbox{
+  max-width: 100%;
+  height: 100%;
+}
+
+#pic,
+#mov{
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  padding-top: 50px;
+}
+
+.arrow {
+  position: relative;
+}
+.arrow::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border: 12px solid transparent;
+  border-top: 12px solid #000;
+  border-bottom-width: 0;
+}
+
+/* 点滅 */
+.blinking{
+  animation:blink 1.5s ease-in-out infinite alternate;
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.centering{
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.centering-L{
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+/* Boostrapと競合するためコメントアウト */
+/* 
+.btn {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  text-decoration: none;
+  font: inherit;
+  border: 1px solid #00695c;
+  color: #00695c;
+  background: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #00695c;
+  color: white;
+}
+
+.btn.danger {
+  color: red;
+  border-color: red;
+}
+
+.btn.danger:hover,
+.btn.danger:active {
+  background: red;
+  color: white;
+} */
+

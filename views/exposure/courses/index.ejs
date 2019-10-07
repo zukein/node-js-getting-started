@@ -1,0 +1,60 @@
+<%- include('../../includes/head.ejs') %>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="/javascripts/exposure.js"></script>
+<link rel="stylesheet" href="/stylesheets/exposure.css">
+</head>
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+  <main>
+      <%- include('../commonNav.ejs') %>
+    <div class="container">
+
+      <h2 class="center">何をする？</h2>
+      <div class="background">
+
+        <!-- <div class="card">
+            <div class="title-box">
+              <p class="title">
+                <a>何をする？</a>
+              </p>
+            </div>
+          </div> -->
+
+        <div class="button_wrapper">
+          <a href="<%= '/courses/new' %>" class="btn-circle-flat2">＋</a>
+        </div>
+
+
+        <% courses.forEach(course => { %>
+        <div class="card">
+          <div class="image-box">
+          </div>
+          <div class="title-box">
+            <p class="title">
+              <a href="<%= `/courses/${course._id}` %>">
+                <%= course.title %>
+
+            </p>
+          </div>
+          <div class="line"></div>
+          <div class="desc-box">
+            <p class="desc">
+              挑戦日時：<%= course.description %>〜
+            </p>
+            <div class="desc2">
+              <a href="<%=`courses/${course._id}/edit`%>" class="btn-circle-flat">✏️</a>
+              <a href="<%= `courses/${course._id}/delete?_method=DELETE` %>" onclick="return confirm('削除して良いですか？')"
+                class="btn-circle-flat">🗑</a>
+              <a href="<%= `chat/` %>" onclick="return confirm('挑戦しますか？')" class="btn-circle-flat3">Try!</a>
+            </div>
+
+          </div>
+        </div>
+        <% }); %>
+      </div>
+
+    </div>
+  </main>
+
+  <%- include('../../includes//end.ejs') %>

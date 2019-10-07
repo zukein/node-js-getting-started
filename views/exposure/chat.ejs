@@ -1,0 +1,11 @@
+<% if (currentUser) { %>
+<h1>タイムライン</h1>
+<div id="chat"></div>
+<form id="chatForm">
+  <input id="chat-input" type="text">
+  <input id="chat-user-id" type="hidden" value="<%= currentUser._id %>">
+  <input id="chat-user-name" type="hidden" value="<%=currentUser.fullName %>">
+  <input type="submit" value="投稿">
+</form>
+
+<% } %>
