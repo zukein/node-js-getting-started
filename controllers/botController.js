@@ -40,7 +40,7 @@ exports.storyBot = (req, res, next) => {
 				story = stories.output[progress];
 				return Story.convertKeyword(story, userName);
 			} else {
-				let content = `今日はここまでにしましょう！お疲れ様でした！`;
+				let content = `今日はここまでにしましょう！お疲れ様でした！！`;
 				let data = {
 					"output": [
 						{
